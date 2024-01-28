@@ -85,7 +85,7 @@ function showPopup(message, className) {
 function scanErrorHandler(error) {
     if (error !== "QR code parse error, error = NotFoundException: No MultiFormat Readers were able to detect the code."
     ) {
-        showPopup(`Erreur de scan: ${error}`, "red");
+        showPopup(`${error}`, "red");
 }}
 
 // Fonction pour afficher les informations du ticket
