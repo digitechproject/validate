@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Scanner de Ticket</title>
+        <link rel="stylesheet" href="styles.css">
+        <script defer src="bundle.js"></script> <!-- bundle.js contient le code de index.js compilé -->
+    </head>
+<body>
+    <div id="scanner-container">
+        <!-- Le scanner de QR Code sera initialisé ici -->
+    </div>
+    <button id="home-button" onclick="location.href='index.html'">Retour à l'Accueil</button>
+    <div id="popup-container">
+        <!-- Popups d'erreur ou de confirmation -->
+    </div>
+
+    <!-- Popup de validation -->
+    <div id="validation-popup" class="popup">
+        <div class="popup-content">
+            <p id="ticket-info">Ticket n°: <strong id="ticketId"></strong></p>
+            <p>Prénom: <strong id="firstName"></strong></p>
+            <p>Sexe: <span id="gender"></span></p>
+            <p>WhatsApp: <span id="phoneNumber"></span></p>
+            <button id="validate-button">Valider</button>
+            <button id="cancel-button">Annuler</button>
+        </div>
+    </div>
+
+    <!-- Popup d'erreur informations non valides -->
+    <div id="error-popup" class="popup">
+        <div class="popup-content">
+            <p>Informations non valides</p>
+        </div>
+    </div>
+
+    <!-- Popup d'erreur ticket invalide -->
+    <div id="invalid-popup" class="popup">
+        <div class="popup-content">
+            <p>Ticket invalide</p>
+        </div>
+    </div>
+
+    <!-- Popup de confirmation ticket validé -->
+    <div id="confirmed-popup" class="popup">
+        <div class="popup-content">
+            <p>Ticket Validé</p>
+        </div>
+    </div>
+</body>
+</html>

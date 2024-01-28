@@ -1,0 +1,61 @@
+/* styles.css */
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.button-container {
+    margin: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 1em; /* changed from 16px to 1em */
+}
+
+#scanner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 15px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 1000; /* to ensure it's on top */
+    display: none; /* hide by default */
+}
+
+.popup.show {
+    display: block; /* show the popup */
+}
+
+.popup.red {
+    background: rgba(255, 0, 0, 0.2);
+}
+
+.popup.green {
+    background: rgba(0, 255, 0, 0.2);
+}
+
+.popup.white {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.popup-content {
+    text-align: center;
+}
